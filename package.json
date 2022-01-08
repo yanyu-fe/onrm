@@ -1,19 +1,20 @@
 {
-  "name": "onrm",
-  "version": "1.1.6",
+  "name": "@yanyu-fe/onrm",
+  "version": "1.0.0",
   "main": "./dist/core.js",
   "bin": {
     "onrm": "bin/onrm.js"
   },
-  "author": "Gem Xli <x.li.gem@gmail.com>",
-  "repository": "git@github.com:cwxyz007/onrm.git",
+  "author": "aibayanyu <aibayanyu@gmail.com>",
+  "repository": "git@github.com:yanyu-fe/onrm.git",
   "bugs": {
     "url": "https://github.com/cwxyz007/onrm/issues/new"
   },
   "keywords": [
     "NPM",
     "YARN",
-    "registry"
+    "registry",
+    "pnpm"
   ],
   "files": [
     "bin",
@@ -22,12 +23,12 @@
   "scripts": {
     "dev": "ts-node src/cli.ts",
     "build": "rimraf dist && tsc --build tsconfig.build.json",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "pnpm build"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "homepage": "https://github.com/cwxyz007/onrm",
+  "homepage": "https://github.com/yanyu-fe/onrm",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",

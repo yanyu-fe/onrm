@@ -1,13 +1,14 @@
 import { getConfig, ONRMConfig, ONRMRC, RegistryConfig, saveConfig } from './config'
 import inquirer from 'inquirer'
-import { npm, RegistryManager, yarn } from './registryManager'
+import { npm, RegistryManager, yarn, pnpm } from './registryManager'
 import chalk from 'chalk'
 import { printTable } from './print'
 import highlight from 'cli-highlight'
 
 const managers: Record<string, RegistryManager> = {
   npm,
-  yarn
+  yarn,
+  pnpm
 }
 
 async function add(name: string, registry: string, homeUrl: string = '') {
